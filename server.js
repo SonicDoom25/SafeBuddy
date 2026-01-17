@@ -6,8 +6,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// 🔐 Replace with your actual API key
-const API_KEY = "";
+// 🔐 API key
+const API_KEY = process.env.SAFEBUDDY_API_KEY;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -76,4 +76,5 @@ app.post('/check-url', async (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`✅ SafeBuddy backend running at http://localhost:${PORT}`);
+
 });
