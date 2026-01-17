@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeBuddy - Home Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <img src="safe_buddy_homepage.jpeg" alt="Family with shield" class="illustration" />
+    </div>
+    <div class="right-panel">
+      <h1>Welcome to <span class="highlight">SafeBuddy</span></h1>
+      <p class="tagline">Helping users stay safe from phishing and malicious websites.</p>
+
+      <!-- Form posts to backend -->
+      <form action="/check-url" method="POST" class="search-box">
+        <input type="text" name="url" placeholder="Paste a link or click a link to check its safety" required />
+        <button type="submit">Check Safety</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

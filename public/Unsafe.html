@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SafeBuddy - Warning: Risk Detected</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #222;
+      border-bottom: 2px solid #ddd;
+    }
+
+    /* Container */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+
+    /* Left Section */
+    .left-section {
+      flex: 1;
+    }
+    .warning-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .flag-icon {
+      width: 150px;
+      height: 150px;
+    }
+    .warning-text {
+      font-size: 20px;
+      color: #000;
+    }
+
+    /* Warning Box */
+    .warning-box {
+      margin-top: 20px;
+      background-color: #ef7d45;
+      padding: 25px;
+      width: 80%;
+      color: #000;
+      font-size: 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .warning-box p {
+      margin-bottom: 10px;
+    }
+
+    /* Right Section */
+    .right-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      padding-top: 30px;
+    }
+
+    /* Buttons */
+    .action-btn {
+      background-color: #ffeb3b;
+      border: 2px solid #000;
+      padding: 14px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 420px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .action-btn:hover {
+      background-color: #fdd835;
+      transform: translateY(-2px);
+    }
+    .action-btn:focus {
+      outline: 3px solid #333;
+    }
+
+    /* Large Screen Scaling */
+    @media (min-width: 1400px) {
+      .warning-text {
+        font-size: 24px;
+      }
+      .warning-box {
+        padding: 35px;
+        font-size: 20px;
+      }
+      .action-btn {
+        font-size: 18px;
+        padding: 18px 30px;
+        max-width: 450px;
+      }
+      .flag-icon {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 30px;
+      }
+      .left-section, .right-section {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+      }
+      .warning-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="top-bar">
+    SafeBuddy - Warning: Risk Detected
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="warning-header">
+        <img src="red_flag.jpeg" alt="Red flag icon indicating danger" class="flag-icon">
+        <p class="warning-text">
+          This site has warning signs<br>
+          and may pose a risk.
+        </p>
+      </div>
+
+      <div class="warning-box" role="alert">
+        <p>“Reported for phishing or malware.”</p>
+        <p>“May try to steal passwords or personal information.”</p>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <button class="action-btn" onclick="location.href='/'">Go Back</button>
+      <button class="action-btn" 
+        onclick="location.href='unsafe_reason.html' + window.location.search">
+      Learn Why This Is Risky
+    </button>
+
+    </div>
+    
+  </div>
+  </body>
+</html>
