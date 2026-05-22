@@ -1,26 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SafeBuddy - Home Page</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <div class="left-panel">
-      <img src="safe_buddy_homepage.jpeg" alt="Family with shield" class="illustration" />
-    </div>
-    <div class="right-panel">
-      <h1>Welcome to <span class="highlight">SafeBuddy</span></h1>
-      <p class="tagline">Helping users stay safe from phishing and malicious websites.</p>
 
-      <!-- Form posts to backend -->
-      <form action="/check-url" method="POST" class="search-box">
-        <input type="text" name="url" placeholder="Paste a link or click a link to check its safety" required />
-        <button type="submit">Check Safety</button>
-      </form>
-    </div>
-  </div>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeBuddy</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Background Glow -->
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ SafeBuddy
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#footer">About</a>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+            <img src="images/safe_buddy_homepage.jpeg"
+                 class="hero-image">
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-right">
+
+            <div class="hero-badge">
+                Human-Centric Cybersecurity
+            </div>
+
+            <h1>
+                Browse Safer With
+                <span>Confidence</span>
+            </h1>
+
+            <p class="tagline">
+
+                SafeBuddy helps users identify phishing,
+                malware, and suspicious links through
+                explainable cybersecurity insights.
+
+            </p>
+
+            <!-- Search -->
+
+            <div class="search-container">
+
+                <input type="text"
+                       id="urlInput"
+                       placeholder="Paste a URL to analyze safety">
+
+                <button onclick="checkURL()">
+                    Analyze URL
+                </button>
+
+            </div>
+
+            <!-- Loading -->
+
+            <div id="loadingBox"
+                 class="loading-box hidden">
+
+                <div class="spinner"></div>
+
+                <span>
+                    Analyzing threat intelligence...
+                </span>
+
+            </div>
+
+            <!-- Quick Trust -->
+
+            <div class="trust-points">
+
+                <div class="trust-item">
+                    ✔ Real-Time Detection
+                </div>
+
+                <div class="trust-item">
+                    ✔ Human-Friendly Explanations
+                </div>
+
+                <div class="trust-item">
+                    ✔ Threat Intelligence Powered
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features"
+             id="features">
+
+        <h2>Why SafeBuddy?</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔍
+                </div>
+
+                <h3>Threat Detection</h3>
+
+                <p>
+                    Detect phishing, malware,
+                    suspicious redirects, and
+                    harmful websites instantly.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>Explainable Security</h3>
+
+                <p>
+                    Understand exactly WHY a
+                    website may be risky using
+                    simple explanations.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <h3>Fast Analysis</h3>
+
+                <p>
+                    Get immediate threat analysis
+                    results powered by modern
+                    security intelligence.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HOW IT WORKS -->
+
+    <section class="workflow"
+             id="how-it-works">
+
+        <h2>How It Works</h2>
+
+        <div class="workflow-grid">
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    1
+                </div>
+
+                <h3>Paste URL</h3>
+
+                <p>
+                    Enter any suspicious or unknown link.
+                </p>
+
+            </div>
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    2
+                </div>
+
+                <h3>Analyze Threats</h3>
+
+                <p>
+                    SafeBuddy checks threat intelligence
+                    databases and security signals.
+                </p>
+
+            </div>
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    3
+                </div>
+
+                <h3>Understand Risks</h3>
+
+                <p>
+                    Receive clear, human-friendly
+                    explanations and threat severity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+
+        <h3>🛡️ SafeBuddy</h3>
+
+        <p>
+            Human-centric cybersecurity platform
+            focused on explainable online safety.
+        </p>
+
+        <div class="footer-bottom">
+
+            Powered by modern threat intelligence
+            and explainable security principles.
+
+        </div>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
 </body>
 </html>
